@@ -14,12 +14,13 @@ console.log(messageList.length);
 
 var InboxView = Backbone.View.extend({
   tagName: 'ul',
+  className: 'table-view',
 
   render: function () {
     // build the message collection html
     var html = this.collection.map(function (model) {
       var data = model.toJSON();
-      return '<li>' + data.content + '</li>';
+      return '<li class="table-view-cell media"><a class="navigate-right" href="#inbox/' + data.uid + '"><img class="media-object pull-left" src="' + data.avatar + '"><div class="media-body">' + data.subject + '<p>' + data.body + '</p></div></a></li>';
     });
 
     this.$el.html(html);
