@@ -16,7 +16,13 @@ var InboxView = Backbone.View.extend({
   tagName: 'ul',
 
   render: function () {
-    this.$el.html('<p>TOTO</p>');
+    // build the message collection html
+    var html = this.collection.map(function (model) {
+      var data = model.toJSON();
+      return '<li>' + data.content + '</li>';
+    });
+
+    this.$el.html(html);
     return this;
   }
 });
