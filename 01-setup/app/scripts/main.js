@@ -28,9 +28,10 @@ var app = new Mn.Application();
 
 app.on('start', function () {
   console.log('Marionette application started');
-
-  // router will intercept route change only when history will have been started
-  Backbone.history.start();
 });
 
-app.start();
+router.on('route', function () {
+  app.start();
+});
+
+Backbone.history.start();
