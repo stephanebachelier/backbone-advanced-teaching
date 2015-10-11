@@ -28,10 +28,13 @@ var app = new Mn.Application();
 
 app.on('start', function () {
   console.log('Marionette application started');
+  app.isStarted = true;
 });
 
 router.on('route', function () {
-  app.start();
+  if (!app.isStarted) {
+    app.start();
+  }
 });
 
 Backbone.history.start();
