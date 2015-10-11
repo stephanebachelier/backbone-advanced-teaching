@@ -12,6 +12,15 @@ var messageList = new Backbone.Collection(messages);
 // verify everything works (and faint jshint with the W098 warning)
 console.log(messageList.length);
 
+var InboxView = Backbone.View.extend({
+  tagName: 'ul',
+
+  render: function () {
+    this.$el.html('<p>TOTO</p>');
+    return this;
+  }
+});
+
 var Router = Backbone.Router.extend({
   routes: {
     '': 'inbox',
@@ -21,7 +30,10 @@ var Router = Backbone.Router.extend({
   },
 
   inbox: function () {
-    debugger; // jshint ignore:line
+    var view = new InboxView({
+      collection: messageList
+    });
+    $container.html(view.render().$el);
   },
 
   compose: function () {
