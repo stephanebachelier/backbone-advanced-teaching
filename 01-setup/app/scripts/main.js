@@ -10,15 +10,15 @@ var Router = Backbone.Router.extend({
   },
 
   inbox: function () {
-    debugger;
+    debugger; // jshint ignore:line
   },
 
   compose: function () {
-    debugger;
+    debugger; // jshint ignore:line
   },
 
-  message: function (mid) {
-    debugger;
+  message: function (mid) { // jshint ignore:line
+    debugger; // jshint ignore:line
   }
 });
 

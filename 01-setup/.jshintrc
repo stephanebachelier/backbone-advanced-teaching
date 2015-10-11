@@ -26,6 +26,8 @@
   "jquery": true,
   "globals": {
     "require": true,
-    "define": true
+    "define": true,
+    "Backbone": true,
+    "Mn": true
   }
 }
