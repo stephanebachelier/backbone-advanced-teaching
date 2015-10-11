@@ -2,6 +2,13 @@
 
 console.log('Hello world!');
 
+// jshint -W117
+var messageList = new Backbone.Collection(messages);
+// jshint +W117
+
+// verify everything works (and faint jshint with the W098 warning)
+console.log(messageList.length);
+
 var Router = Backbone.Router.extend({
   routes: {
     '': 'inbox',
