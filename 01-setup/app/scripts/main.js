@@ -2,6 +2,9 @@
 
 console.log('Hello world!');
 
+// DOM reference to inject our application content
+var $container = $('#container');
+
 // jshint -W117
 var messageList = new Backbone.Collection(messages);
 // jshint +W117
