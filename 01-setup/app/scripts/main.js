@@ -4,6 +4,7 @@ console.log('Hello world!');
 
 var Router = Backbone.Router.extend({
   routes: {
+    '': 'inbox',
     inbox: 'inbox',
     compose: 'compose',
     'inbox/:id': 'message'
