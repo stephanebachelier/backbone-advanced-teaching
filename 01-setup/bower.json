@@ -20,7 +20,8 @@
     "jquery": "~2.1.4",
     "lodash": "~3.10.1",
     "backbone": "~1.2.3",
-    "backbone.marionette": "~2.4.3"
+    "backbone.marionette": "~2.4.3",
+    "ratchet": "~2.0.2"
   },
   "devDependencies": {
     "bourbon": "~4.2.3",
