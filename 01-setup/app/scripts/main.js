@@ -64,8 +64,13 @@ var Router = Backbone.Router.extend({
     debugger; // jshint ignore:line
   },
 
-  message: function (mid) { // jshint ignore:line
-    debugger; // jshint ignore:line
+  message: function (mid) {
+    var message = messageList.find({uid: mid});
+    var view = new MessageView({
+      model: message
+    });
+
+    $container.html(view.render().$el);
   }
 });
 
