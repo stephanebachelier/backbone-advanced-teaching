@@ -5,9 +5,15 @@ console.log('Hello world!');
 // DOM reference to inject our application content
 var $container = $('#container');
 
-// jshint -W117
-var messageList = new Backbone.Collection(messages);
-// jshint +W117
+var Message = Backbone.Model.extend({
+  idAttribute: 'uid'
+});
+
+var MessageList = Backbone.Collection.extend({
+  model: Message
+});
+
+var messageList = new MessageList(messages);
 
 // verify everything works (and faint jshint with the W098 warning)
 console.log(messageList.length);
@@ -20,7 +26,7 @@ var InboxView = Backbone.View.extend({
     // build the message collection html
     var html = this.collection.map(function (model) {
       var data = model.toJSON();
-      return '<li class="table-view-cell media"><a class="navigate-right" href="#inbox/' + data.uid + '"><img class="media-object pull-left" src="' + data.avatar + '"><div class="media-body">' + data.subject + '<p>' + data.body + '</p></div></a></li>';
+      return '<li class="table-view-cell media"><a class="navigate-right" href="#inbox/' + model.id + '"><img class="media-object pull-left" src="' + data.avatar + '"><div class="media-body">' + data.subject + '<p>' + data.body + '</p></div></a></li>';
     });
 
     this.$el.html(html);
