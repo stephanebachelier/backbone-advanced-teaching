@@ -24,13 +24,11 @@ var InboxView = Backbone.View.extend({
   template: _.template($('#inbox-item-tpl').html()),
 
   render: function () {
-    // context bind issue
-    var self = this;
-
+    // using _.bind(method, context) to avoid self usage
     // build the message collection html
-    var html = this.collection.map(function (model) {
-      return self.template(model.toJSON());
-    });
+    var html = this.collection.map(_.bind(function (model) {
+      return this.template(model.toJSON());
+    }, this));
 
     this.$el.html(html);
     return this;
