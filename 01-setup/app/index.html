@@ -17,6 +17,31 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+    <script type="template/form" id="message-tpl">
+      <form class="input-group">
+        <div class="input-row">
+          <label>From</label>
+          <input type="text" readonly>
+        </div>
+        <div class="input-row">
+          <label>Email</label>
+          <input type="email" readonly>
+        </div>
+        <div class="input-row">
+          <label>Date</label>
+          <input type="text" readonly>
+        </div>
+        <div class="input-row">
+          <label>Subject</label>
+          <input type="text" readonly>
+        </div>
+        <div class="input-row">
+          <label>Body</label>
+          <textarea rows="5" readonly></textarea>
+        </div>
+      </form>
+    </script>
   </head>
   <body>
     <!--[if lt IE 10]>

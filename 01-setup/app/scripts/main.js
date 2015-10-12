@@ -34,6 +34,17 @@ var InboxView = Backbone.View.extend({
   }
 });
 
+var MessageView = Backbone.View.extend({
+  template: _.template($('#message-tpl').html()),
+
+  render: function () {
+    var html = this.template(this.model.toJSON());
+    this.$el.html(html);
+
+    return this;
+  }
+})
+
 var Router = Backbone.Router.extend({
   routes: {
     '': 'inbox',
