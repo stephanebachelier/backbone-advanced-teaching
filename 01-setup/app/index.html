@@ -18,6 +18,18 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
+    <script type="template/form" id="inbox-item-tpl">
+      <li class="table-view-cell media">
+        <a class="navigate-right" href="#inbox/<%= uid %>">
+          <img class="media-object pull-left" src="<%= avatar %>">
+          <div class="media-body">
+            <%= subject %>
+            <p><%= body %></p>
+          </div>
+        </a>
+      </li>
+    </script>
+
     <script type="template/form" id="message-tpl">
       <form class="input-group">
         <div class="input-row">

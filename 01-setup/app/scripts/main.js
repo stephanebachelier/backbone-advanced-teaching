@@ -21,12 +21,15 @@ console.log(messageList.length);
 var InboxView = Backbone.View.extend({
   tagName: 'ul',
   className: 'table-view',
+  template: _.template($('#inbox-item-tpl').html()),
 
   render: function () {
+    // context bind issue
+    var self = this;
+
     // build the message collection html
     var html = this.collection.map(function (model) {
-      var data = model.toJSON();
-      return '<li class="table-view-cell media"><a class="navigate-right" href="#inbox/' + model.id + '"><img class="media-object pull-left" src="' + data.avatar + '"><div class="media-body">' + data.subject + '<p>' + data.body + '</p></div></a></li>';
+      return self.template(model.toJSON());
     });
 
     this.$el.html(html);
