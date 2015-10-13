@@ -1,8 +1,9 @@
 define([
   'marionette',
-  'models/messages'
+  'models/messages',
+  'json!#config/messages.json'
 ],
-function (Marionette, Messages) {
+function (Marionette, Messages, data) {
   'use strict';
 
   var app = new Marionette.Application();
@@ -11,7 +12,7 @@ function (Marionette, Messages) {
     console.log('start');
 
     // messages -> var globale
-    var messageList = new Messages(messages);
+    var messageList = new Messages(data.messages);
     console.log(messageList.length);
   });
 
