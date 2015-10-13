@@ -6,7 +6,9 @@ define([
 ], function (Marionette, MessageView, MessageInboxView, MessagesP) {
   'use strict';
 
-  var $container = $('#container');
+  var container = new Marionette.Region({
+    el: document.querySelector('#container')
+  });
 
   var RouteController = Marionette.Object.extend({
     inbox: function () {
@@ -15,7 +17,7 @@ define([
           collection: collection
         });
 
-        $container.html(view.render().el);
+        container.show(view);
       });
     },
 
@@ -25,7 +27,7 @@ define([
           model: collection.find({uid: id})
         });
 
-        $container.html(view.render().el);
+        container.show(view);
       });
     },
 
