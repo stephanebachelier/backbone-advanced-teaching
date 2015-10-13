@@ -1,7 +1,7 @@
 define([
   'marionette',
   'views/message',
-  'views/inbox/message-searchable-list',
+  'views/inbox/layout',
   'resources/messages'
 ], function (Marionette, MessageView, MessageInboxView, MessagesP) {
   'use strict';
