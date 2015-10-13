@@ -16,6 +16,10 @@ this["JST"]["inbox/message-item"] = Handlebars.template({"compiler":[6,">= 2.0.0
     + "</p></div></a></li>";
 },"useData":true});
 
+this["JST"]["inbox/searchable-list"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<form><input class=\"content-padded\" type=\"search\" placeholder=\"Search\"></form><div data-widget=\"list\"></div>";
+},"useData":true});
+
 this["JST"]["message"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
