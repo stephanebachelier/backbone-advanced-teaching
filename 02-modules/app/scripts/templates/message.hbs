@@ -1,0 +1,19 @@
+<form class="input-group">
+  <div class="input-row">
+    <label>From</label>
+    <input type="text" readonly value="{{ name }}">
+  </div>
+  <div class="input-row">
+    <label>Email</label>
+    <input type="email" readonly value="{{ email }}">
+  </div>
+  <div class="input-row">
+    <label>Date</label>
+    <input type="text" readonly value="{{ sent }}">
+  </div>
+  <div class="input-row">
+    <label>Subject</label>
+    <input type="text" readonly value="{{ subject }}">
+  </div>
+  <textarea rows="5" readonly>{{ body }}</textarea>
+</form>
