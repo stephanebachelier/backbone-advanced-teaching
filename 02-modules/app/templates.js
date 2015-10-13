@@ -1,4 +1,4 @@
-define(['handlebars/handlebars'], function(Handlebars) {
+define(['handlebars/index'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
