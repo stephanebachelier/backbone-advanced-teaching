@@ -1,6 +1,7 @@
 define([
   'marionette',
-  'templates'
+  'templates',
+  'backbone.syphon' // no return
 ],
 function (Marionette, templates) {
   'use strict';
@@ -21,7 +22,8 @@ function (Marionette, templates) {
       e.preventDefault(); // stop page from refreshing
       e.stopPropagation(); // stop from bubbling; -> phase 3
 
-      var input = this.ui.input.val();
+      // var input = this.ui.input.val();
+      var data = Backbone.Syphon.serialize(this);
 
       // special dedicace pour IE ~8
       return false;

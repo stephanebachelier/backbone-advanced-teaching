@@ -12,6 +12,7 @@ require.config({
     text: '../bower_components/text/text',
     json: '../bower_components/requirejs-plugins/src/json',
     'handlebars.runtime': '../bower_components/handlebars/handlebars.runtime.amd',
+    'backbone.syphon': '../bower_components/backbone.syphon/lib/backbone.syphon'
 
   },
 
