@@ -9,7 +9,9 @@ require.config({
     'backbone.wreqr': '../bower_components/backbone.wreqr/lib/backbone.wreqr',
     marionette: '../bower_components/backbone.marionette/lib/core/backbone.marionette',
     text: '../bower_components/text/text',
-    json: '../bower_components/requirejs-plugins/src/json'
+    json: '../bower_components/requirejs-plugins/src/json',
+    'handlebars.runtime': '../bower_components/handlebars/handlebars.runtime.amd',
+
   },
 
   deps: ['jquery', 'underscore', 'backbone', 'marionette']
