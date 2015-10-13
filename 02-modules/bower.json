@@ -1,0 +1,30 @@
+{
+  "name": "html5-webapp-boilerplate",
+  "version": "0.0.0",
+  "authors": [
+    "Stéphane Bachelier <stephane.bachelier@gmail.com>"
+  ],
+  "description": "html5 webapp boilerplate w/ Grunt, SCSS",
+  "main": "app/index.html",
+  "private": true,
+  "license": "MIT",
+  "homepage": "github.com/stephanebachelier/html5-webapp-boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "backbone": "~1.2.3",
+    "backbone.marionette": "~2.4.3",
+    "ratchet": "~2.0.2"
+  },
+  "devDependencies": {
+    "bourbon": "~4.2.3",
+    "neat": "~1.7.2"
+  }
+}
