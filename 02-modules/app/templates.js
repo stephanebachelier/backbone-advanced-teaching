@@ -2,6 +2,10 @@ define(['handlebars/index'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
+this["JST"]["inbox/layout"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<form></form><div data-widget=\"list\"></div>";
+},"useData":true});
+
 this["JST"]["inbox/message-item"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
