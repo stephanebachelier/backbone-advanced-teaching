@@ -1,15 +1,22 @@
 define([
   'marionette',
   'views/message',
+  'views/inbox/message-list',
   'resources/messages'
-], function (Marionette, MessageView, MessagesP) {
+], function (Marionette, MessageView, MessageInboxView, MessagesP) {
   'use strict';
 
   var $container = $('#container');
 
   var RouteController = Marionette.Object.extend({
     inbox: function () {
-      debugger;
+      MessagesP.then(function (collection) {
+        var view = new MessageInboxView({
+          collection: collection
+        });
+
+        $container.html(view.render().el);
+      });
     },
 
     message: function (id) {
