@@ -13,7 +13,6 @@ report
 coverage
 data/**/*.json
 fixtures/**/*.json
-app/data
 app/config
 app/fixtures
 app/scripts/modules/*/config/*.json
