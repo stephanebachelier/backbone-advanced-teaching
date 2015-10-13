@@ -6,6 +6,6 @@ function (Marionette, templates) {
   'use strict';
 
   return Marionette.ItemView.extend({
-    template: templates['message-item']
+    template: templates['inbox/message-item']
   });
 });
