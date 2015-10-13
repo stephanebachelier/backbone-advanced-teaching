@@ -1,6 +1,7 @@
 require.config({
   paths: {
     '#config': '../config',
+    templates: '../templates',
 
     jquery: '../bower_components/jquery/dist/jquery',
     underscore: '../bower_components/underscore/underscore',
