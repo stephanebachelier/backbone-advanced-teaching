@@ -2,8 +2,12 @@ define(['handlebars/index'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
+this["JST"]["inbox/form"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<input type=\"search\" name=\"search\" placeholder=\"Search\" >";
+},"useData":true});
+
 this["JST"]["inbox/layout"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<form></form><div data-widget=\"list\"></div>";
+    return "<div data-widget=\"form\"><input type=\"search\" name=\"search\" placeholder=\"Search\" ></div><div data-widget=\"list\"></div>";
 },"useData":true});
 
 this["JST"]["inbox/message-item"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
