@@ -2,12 +2,15 @@ define([
   'marionette',
   'models/messages',
   'json!#config/messages.json',
-  'templates'
+  'templates',
+  'router'
 ],
-function (Marionette, Messages, data, templates) {
+function (Marionette, Messages, data, templates, router) {
   'use strict';
 
   var app = new Marionette.Application();
+
+  app.router = router;
 
   app.on('start', function () {
     console.log('start');
