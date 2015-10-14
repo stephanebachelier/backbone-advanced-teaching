@@ -25,6 +25,8 @@ function (Marionette, templates) {
       // var input = this.ui.input.val();
       var data = Backbone.Syphon.serialize(this);
 
+      this.triggerMethod('search:text', data);
+
       // special dedicace pour IE ~8
       return false;
     }

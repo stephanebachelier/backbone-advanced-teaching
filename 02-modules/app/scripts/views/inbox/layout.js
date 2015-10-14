@@ -15,6 +15,16 @@ function (Marionette, templates, MessageListView, FormView) {
       list: '[data-widget=list]'
     },
 
+    childEvents: {
+      'search:text': function (childView, msg) {
+        var candidates = this.collection.filter(function (model)  {
+          return model.attributes.subject.match(msg.search) || model.attributes.body.match(msg.search);
+        });
+
+        this.collection.reset(candidates);
+      }
+    },
+
     onRender: function () {
       this.list.show(new MessageListView({
         collection: this.getOption('collection')
