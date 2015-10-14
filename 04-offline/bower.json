@@ -1,0 +1,11 @@
+{
+  "name": "localforage-backbone-example",
+  "dependencies": {
+    "localforage": "^1.2.0",
+    "backbone": "~1.2.3",
+    "underscore": "~1.7.0",
+    "jquery": "~2.1.0",
+    "ratchet": "~2.0.2",
+    "localforage-backbone": "~0.6.2"
+  }
+}
